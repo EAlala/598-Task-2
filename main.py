@@ -147,3 +147,21 @@ if user_choice == "Ready":
     plt.xticks(rotation=45)
     plt.tight_layout()
     plt.show()
+
+#User choice to See Debt-to-Income Distributione Chart
+print("\nType Ready to See Debt-to-Income Distribution Chart")
+
+user_choice = input("")
+
+if user_choice == "Ready":
+
+    # Chart: Debt-to-Income Distribution
+    plt.figure(figsize=(10, 4))
+    plt.hist(debt_to_income_ratio, bins=20, color='orange', alpha=0.7)
+    plt.title('Distribution of Debt-to-Income Ratios')
+    plt.xlabel('Debt-to-Income Ratio')
+    plt.ylabel('Number of Companies')
+    plt.axvline(debt_to_income_ratio.median(), color='red', linestyle='--', label='Median')
+    plt.legend()
+    plt.tight_layout()
+    plt.show()

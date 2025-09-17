@@ -76,6 +76,13 @@ if user_choice == "Ready":
     )
     print("All New Ratios Complete")
 
+    # Create new dataframe for new ratios
+    debt_to_income_data = pd.DataFrame({
+        "Business ID": data["Business ID"], # Column for Business ID
+        "Debt to Income Ratio": debt_to_income_ratio # Column for debt to incom ratio
+        })
+        
+
     
 
     

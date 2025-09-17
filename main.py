@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import os
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 #User choice to start Reading the File
 print("Type Ready to Start the Reading of the Data file")

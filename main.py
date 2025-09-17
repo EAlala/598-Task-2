@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import os
-import matplotlib
+import matplotlib as plt
 
 #User choice to start Reading the File
 print("Type Ready to Start the Reading of the Data file")
@@ -110,3 +110,22 @@ if user_choice == "Ready":
 Python Software Foundation. (2023). Python Language Reference (Version 3.12) [Computer software]. Retrieved from https://docs.python.org/3/reference/
 
 """
+
+#User choice to See High-Risk Companies (Negative Equity) Chart
+print("\nType Ready to See High-Risk Companies (Negative Equity) Chart")
+
+user_choice = input("")
+
+if user_choice == "Ready":
+
+    # Visualizations 
+    # Chart: High-Risk Companies (Negative Equity)
+    plt.figure(figsize=(10, 4))
+    negative_df = data[data['Debt to Equity'] < 0]
+    plt.bar(negative_df['Business State'], negative_df['Debt to Equity'], color='red')
+    plt.title('High-Risk Companies: Negative Debt-to-Equity')
+    plt.xlabel('State')
+    plt.ylabel('Debt-to-Equity Ratio')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()

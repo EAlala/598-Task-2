@@ -14,8 +14,8 @@ if user_choice == "Ready":
     data = pd.read_csv(r"C:\Users\yeai2_6rsknlh\Downloads\D598 Data Set.csv") # Path to read file
     print(f"Length of Data Set is {len(data)}") #Show length of data set
 
-#User choice to start Looking for duplicates
-print("\nType Ready to Start Looking for duplicates ")
+#User choice to start Looking for Duplicates
+print("\nType Ready to Start Looking for Duplicates ")
 user_choice = input("")
 
 if user_choice == "Ready":
@@ -76,7 +76,7 @@ if user_choice == "Ready":
     )
     print("All New Ratios Complete")
 
-#User choice to Create New Data Frame
+#User choice to Create New DataFrame for New Ratios
 print("\nType Ready to Create New DataFrame for New Ratios")
 
 user_choice = input("")

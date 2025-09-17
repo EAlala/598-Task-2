@@ -121,8 +121,8 @@ if user_choice == "Ready":
     # Visualizations 
     # Chart: High-Risk Companies (Negative Equity)
     plt.figure(figsize=(10, 4))
-    negative_df = data[data['Debt to Equity'] < 0]
-    plt.bar(negative_df['Business State'], negative_df['Debt to Equity'], color='red')
+    negative_data = data[data['Debt to Equity'] < 0]
+    plt.bar(negative_data['Business State'], negative_data['Debt to Equity'], color='red')
     plt.title('High-Risk Companies: Negative Debt-to-Equity')
     plt.xlabel('State')
     plt.ylabel('Debt-to-Equity Ratio')
@@ -139,7 +139,7 @@ if user_choice == "Ready":
 
     # Chart: Profitability by State
     plt.figure(figsize=(10, 4))
-    profit_by_state = df.groupby('Business State')['Profit Margin'].mean().sort_values(ascending=False)
+    profit_by_state = data.groupby('Business State')['Profit Margin'].mean().sort_values(ascending=False)
     profit_by_state.plot(kind='bar', color='green')
     plt.title('Average Profit Margin by State')
     plt.xlabel('State')
@@ -175,7 +175,7 @@ if user_choice == "Ready":
 
     # Chart: Revenue vs. Debt
     plt.figure(figsize=(10, 4))
-    plt.scatter(df['Total Revenue'], df['Total Long-term Debt'], alpha=0.5)
+    plt.scatter(data['Total Revenue'], data['Total Long-term Debt'], alpha=0.5)
     plt.title('Revenue vs. Long-term Debt')
     plt.xlabel('Total Revenue')
     plt.ylabel('Total Long-term Debt')

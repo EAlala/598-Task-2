@@ -161,7 +161,7 @@ if user_choice == "Ready":
     plt.title('Distribution of Debt-to-Income Ratios')
     plt.xlabel('Debt-to-Income Ratio')
     plt.ylabel('Number of Companies')
-    plt.axvline(debt_to_income_ratio.median(), color='red', linestyle='--', label='Median')
+    plt.axvline(np.median(debt_to_income_ratio), color='red', linestyle='--', label='median')
     plt.legend()
     plt.tight_layout()
     plt.show()

@@ -105,3 +105,8 @@ if user_choice == "Ready":
     # Save to a Excel copy file 
     final_data.to_csv("Excel Copy.csv", index = False)
 
+# Sources Used
+"""
+Python Software Foundation. (2023). Python Language Reference (Version 3.12) [Computer software]. Retrieved from https://docs.python.org/3/reference/
+
+"""

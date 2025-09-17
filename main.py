@@ -45,7 +45,7 @@ if user_choice == "Ready":
     print(state_stats.head()) # Show first 5 rows
 
 #User choice to start Filtering Negative Debt
-print("\nType Ready to Start Grouping")
+print("\nType Ready to Start Filtering Negative Debt")
 
 user_choice = input("")
 
@@ -76,12 +76,22 @@ if user_choice == "Ready":
     )
     print("All New Ratios Complete")
 
+#User choice to Create New Data Frame
+print("\nType Ready to Create New DataFrame for New Ratios")
+
+user_choice = input("")
+
+if user_choice == "Ready":
+
     # Create new dataframe for new ratios
     debt_to_income_data = pd.DataFrame({
         "Business ID": data["Business ID"], # Column for Business ID
         "Debt to Income Ratio": debt_to_income_ratio # Column for debt to incom ratio
         })
-        
+    
+    print (debt_to_income_data.head())
+
+
 
     
 

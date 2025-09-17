@@ -60,3 +60,22 @@ if user_choice == "Ready":
         print(negative_data[['Business ID', 'Business State', 'Debt to Equity']].to_string(index=False)) #Selects columns with negative debt and formats for printing
     else:
         print("No companies with with debt negative Debt-to-Equity ratios")
+
+#User choice to start Calculating New Ratio
+print("\nType Ready to Calculate New Ratio")
+
+user_choice = input("")
+
+if user_choice == "Ready":
+
+    # Calculate New ratio from every business
+    debt_to_income_ratio = np.where(
+    data['Total Revenue'] != 0,  # Check: Is Revenue NOT zero?
+    data['Total Long-term Debt'] / data['Total Revenue'],  # If yes, calculate normally.
+    np.nan  # If no (Revenue is zero), assign NaN (Not a Number) instead of crashing.
+    )
+    print("All New Ratios Complete")
+
+    
+
+    

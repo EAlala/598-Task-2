@@ -129,3 +129,21 @@ if user_choice == "Ready":
     plt.xticks(rotation=45)
     plt.tight_layout()
     plt.show()
+
+#User choice to See Profitability by State Chart
+print("\nType Ready to See Profitability by State Chart")
+
+user_choice = input("")
+
+if user_choice == "Ready":
+
+    # Chart: Profitability by State
+    plt.figure(figsize=(10, 4))
+    profit_by_state = df.groupby('Business State')['Profit Margin'].mean().sort_values(ascending=False)
+    profit_by_state.plot(kind='bar', color='green')
+    plt.title('Average Profit Margin by State')
+    plt.xlabel('State')
+    plt.ylabel('Average Profit Margin')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()

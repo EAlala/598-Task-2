@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import sys
 
 # System Exit
-print("TYPE EXIT TO LEAVE SCRIPT IF NEEDED")
+print("\nTYPE 'EXIT' TO LEAVE SCRIPT IF NEEDED")
 
 #User choice to start Reading the File
 print("Type Ready to Start the Reading of the Data file")

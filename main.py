@@ -165,3 +165,19 @@ if user_choice == "Ready":
     plt.legend()
     plt.tight_layout()
     plt.show()
+
+#User choice to See Revenue vs. Debte Chart
+print("\nType Ready to See Revenue vs. Debt Chart")
+
+user_choice = input("")
+
+if user_choice == "Ready":
+
+    # Chart: Revenue vs. Debt
+    plt.figure(figsize=(10, 4))
+    plt.scatter(df['Total Revenue'], df['Total Long-term Debt'], alpha=0.5)
+    plt.title('Revenue vs. Long-term Debt')
+    plt.xlabel('Total Revenue')
+    plt.ylabel('Total Long-term Debt')
+    plt.tight_layout()
+    plt.show()

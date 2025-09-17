@@ -91,8 +91,17 @@ if user_choice == "Ready":
     
     print (debt_to_income_data.head())
 
+#User choice to Add New Column to Excel Copy and Save the Excel Copy
+print("\nType Ready to Add New Column to Excel Copy and Save the Excel Copy")
 
+user_choice = input("")
 
-    
+if user_choice == "Ready":
 
-    
+    # Add the new column to the original data
+    final_data = data.copy() # Make a copy of the excel
+    final_data['Debt to Income Ratio'] = debt_to_income_ratio # Add new column to copy
+
+    # Save to a Excel copy file 
+    final_data.to_csv("Excel Copy.csv", index = False)
+

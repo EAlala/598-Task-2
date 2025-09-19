@@ -29,17 +29,15 @@ while True:
 
     if user_choice == "Ready":
 
-        #Look for duplicates
-        dup_rows = data.duplicated().sum() #Checks for duplicates in rows and adds them
-        dup_id = data["Business ID"].duplicated().sum() #Check for duplicates in Business ID column and adds them
+        #Look for duplicates in the whole dataset
+        dup_data = data[data.duplicated()]#Checks for duplicates
 
         #If statment for duplicates
-        if dup_rows > 0: #If sum of duplicate rows is greather than 0
-            print(f"There are duplicate rows {dup_rows}")
-        elif dup_id > 0: #If sum of duplicate ID's is greather than 0
-            print(f"There are duplicate ID's {dup_id}")
-        else: #If both sums are 0 then there is no duplicates
-            print("There are no duplicate rows or ID's")
+        if len(dup_data) > 0: #If length of duplicate rows is greather than 0
+            print(f"There are duplicates {dup_data}")
+            print(dup_data.head())
+        else:
+            print("There are no duplicates")
         break
     elif user_choice == "Exit":
         sys.exit()
